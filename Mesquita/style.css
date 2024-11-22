@@ -1,0 +1,191 @@
+/* Estilos Comuns */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #fcfdff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+}
+
+header {
+    width: 100%; /* Faz o header ocupar 100% da largura da tela */
+    margin: 0; /* Remove qualquer margem externa */
+    padding: 0; /* Remove qualquer padding interno */
+    box-sizing: border-box; /* Garante que o padding e a borda não aumentem a largura */
+    background-color: #015482;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    margin-bottom: 50px;
+}
+
+header img {
+    height: 80px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav ul li a:hover {
+    color: #f4d03f;
+}
+
+.container {
+    margin: auto;
+    width: 80%;
+}
+
+/* Estilos do Carrossel */
+.carousel {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.carousel-inner {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-item {
+    display: none; /* Oculta todos os itens inicialmente */
+}
+
+.carousel-item.active {
+    display: block; /* Exibe o item ativo */
+}
+
+.carousel-item img {
+    width: 640px; /* Largura ajustada para 16,93 cm */
+    height: 512px; /* Altura ajustada para 13,54 cm */
+    margin: auto;
+    border-radius: 10px;
+}
+
+/* Controles de Navegação do Carrossel */
+.carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carousel-control-prev {
+    left: 10px;
+}
+
+.carousel-control-next {
+    right: 10px;
+}
+
+.carousel-control-prev:hover, .carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+footer {
+    background-color: #015482;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.instagram-link {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    header {
+        flex-direction: row; /* Mantenha o layout em linha para telas menores */
+        justify-content: space-between; /* Logo e navegação em extremos opostos */
+        padding: 20px; /* Aumenta o padding para mais espaço */
+    }
+
+    header img {
+        height: 70px; /* Aumenta um pouco a altura da logo */
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: 15px; /* Aumenta o espaçamento entre os itens */
+    }
+
+    nav ul li a {
+        font-size: 16px; /* Diminui o tamanho da fonte dos links */
+    }
+
+    .carousel {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .carousel-item img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 15px; /* Ajusta o padding para telas muito pequenas */
+    }
+
+    header img {
+        height: 60px; /* Aumenta a altura da logo para telas pequenas */
+    }
+
+    nav ul {
+        gap: 10px; /* Ajusta o espaçamento entre os itens */
+    }
+
+    nav ul li a {
+        font-size: 14px; /* Mantém o tamanho da fonte menor para telas pequenas */
+    }
+
+    footer {
+        padding: 10px 0;
+    }
+}
+
+
+p {
+    font-size: 16px; /* Tamanho da fonte do parágrafo */
+}
+
+a {
+    color: black; /* Cor do texto do número */
+    text-decoration: none; /* Remove o sublinhado do link */
+    font-weight: normal; /* Peso normal para o link */
+}
+
+a:hover {
+    color: blue; /* Cor do texto do número ao passar o mouse */
+}
+
+strong {
+    font-weight: bold; /* Negrito para o texto "Contato:" */
+}
